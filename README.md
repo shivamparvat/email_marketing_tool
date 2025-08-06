@@ -1,4 +1,3 @@
-
 ### **Custom Email Limits**
 You can now specify how many emails to send:
 
@@ -74,3 +73,49 @@ This shows:
 📧 Remaining unsent emails: 100
 💡 Run again with: npm run email 100 (or any number you prefer)
 ``` 
+
+## emails.json Example Format
+
+```json
+[
+  {
+    "email": "exmple@proeprtylekh.com",
+  },
+]
+```
+
+## .env Example
+
+```
+# SMTP configuration for Hostinger or your email provider
+HOSTINGER_SMTP_HOST=smtp.hostinger.com
+HOSTINGER_SMTP_PORT=465
+HOSTINGER_SMTP_USER=your@email.com
+HOSTINGER_SMTP_PASS=your_app_password
+
+# Gmail example (if using email-config.js)
+EMAIL_USER=your-email@gmail.com
+EMAIL_PASS=your-app-password
+```
+
+## Available Commands
+
+### NPM Scripts
+
+- `npm run email`         - Send emails to all unsent recipients (default batch)
+- `npm run email:20`      - Send next 20 emails
+- `npm run email:50`      - Send next 50 emails
+- `npm run email:100`     - Send next 100 emails
+- `npm run manage`        - Manage email list and check status
+- `npm run marketing`     - Run the marketing script
+- `npm run test`          - Run the scraper in test mode (first 10 projects)
+
+### Node Commands
+
+- `node scraper.js`               - Run the full scraper for all projects
+- `node scraper-test.js`          - Run the scraper for the first 10 projects (test mode)
+- `node mail-marketing.js`        - Send emails to all unsent recipients (default batch)
+- `node mail-marketing.js 15`     - Send next 15 emails
+- `node mail-marketing.js 75`     - Send next 75 emails
+- `node email-list-manager.js`    - Manage email list and check status
+- `node marketing.js`             - Run the marketing script 
