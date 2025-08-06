@@ -363,7 +363,7 @@ function isEmailBlocked(email) {
 function loadProcessedData() {
     try {
         if (fs.existsSync('emails.json')) {
-            const data = JSON.parse(fs.readFileSync('eamils.json', 'utf8'));
+            const data = JSON.parse(fs.readFileSync('emails.json', 'utf8'));
             return data.filter(project => {
                 // Check if email is valid and not blocked
                 const isValidEmail = project.email && project.email.includes('@') && project.email !== 'Error fetching';
