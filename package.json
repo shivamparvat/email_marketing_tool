@@ -1,0 +1,25 @@
+{
+  "name": "propertylekh",
+  "version": "1.0.0",
+  "description": "Real estate data scraper and email marketing service",
+  "main": "scraper.js",
+  "bin": {
+    "propertylekh-marketing": "./marketing.js"
+  },
+  "scripts": {
+    "email": "node mail-marketing.js",
+    "email:20": "node mail-marketing.js 20",
+    "email:50": "node mail-marketing.js 50",
+    "email:100": "node mail-marketing.js 100",
+    "manage": "node email-list-manager.js"
+  },
+  "dependencies": {
+    "nodemailer": "^6.9.7",
+    "dotenv": "^16.0.3"
+  },
+  "keywords": [
+    "email-marketing"
+  ],
+  "author": "PropertyLekh",
+  "license": "MIT"
+}
